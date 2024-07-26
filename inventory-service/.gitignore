@@ -1,10 +1,76 @@
+# Help files
 HELP.md
+
+# Build and dependency directories
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+node_modules/
+venv/
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+.dist-info/
+.parcel-cache/
 
-### STS ###
+# Logs
+*.log
+
+# Database files
+docker/mysql/data/
+inventory-service/docker/mysql/data/
+
+# IDE and editor configurations
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+
+# Environment variables
+.env
+.env.local
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Private keys and certificates
+*.pem
+*.key
+
+# Compiled binaries and libraries
+*.exe
+*.dll
+*.so
+*.jar
+
+# Ignore other config files containing sensitive information
+application.properties
+application.yml
+
+# Java and Kotlin
+*.class
+*.war
+*.ear
+
+# Gradle
+.gradle/
+build/
+out/
+!gradle-wrapper.jar
+
+# IntelliJ IDEA
+.idea
+*.iws
+*.iml
+*.ipr
+
+# Eclipse and STS
 .apt_generated
 .classpath
 .factorypath
@@ -13,27 +79,49 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# NetBeans
+nbproject/private/
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
 
-# Ignore Unix socket files
+# VS Code
+.history/
+*.code-workspace
+
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.pdb
+
+# C/C++
+*.obj
+*.o
+*.d
+*.dSYM/
+*.su
+*.dwo
+*.lo
+*.la
+
+# Go
+*.exe
+*.test
+*.out
+
+# Rust
+*.rlib
+target/
+
+# Ruby
+*.gem
+*.rbc
+*.rbenv-version
+vendor/bundle/
+
+# Unix socket files
 *.sock
-
-# Ignore MySQL data directory
-inventory-service/docker/mysql/data/
-
-### VS Code ###
-.vscode/

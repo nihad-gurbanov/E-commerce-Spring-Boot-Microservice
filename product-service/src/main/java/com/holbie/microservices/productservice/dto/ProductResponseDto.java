@@ -12,4 +12,6 @@ public class ProductResponseDto {
     private String name;
     private String description;
     private BigDecimal price;
+    private String skuCode;
+    private Integer quantity;
 }

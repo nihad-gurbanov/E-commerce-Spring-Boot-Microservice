@@ -32,4 +32,9 @@ public class ProductService {
                 .map(product -> modelMapper.map(product, ProductResponseDto.class))
                 .toList();
     }
+
+    public void deleteProduct(String id) {
+        productRepository.deleteById(id);
+        log.info("Product deleted with id: {}", id);
+    }
 }

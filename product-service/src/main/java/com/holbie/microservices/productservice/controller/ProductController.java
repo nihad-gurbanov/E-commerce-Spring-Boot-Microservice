@@ -29,4 +29,11 @@ public class ProductController {
     public List<ProductResponseDto> getAllProducts() {
         return productService.getAll();
     }
+
+    @DeleteMapping("/delete/{id}")
+    public String deleteProduct(@PathVariable String id) {
+        productService.deleteProduct(id);
+        return "Product deleted successfully";
+    }
+
 }

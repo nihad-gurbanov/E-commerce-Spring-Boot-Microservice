@@ -11,4 +11,5 @@ public class OrderRequestDto {
     private String skuCode;
     private BigDecimal price;
     private Integer quantity;
+    private UserDetailsDto userDetails;
 }

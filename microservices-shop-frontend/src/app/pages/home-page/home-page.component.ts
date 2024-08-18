@@ -50,6 +50,10 @@ export class HomePageComponent implements OnInit {
   orderProduct(product: Product, quantity: string) {
 
     this.oidcSecurityService.userData$.subscribe(result => {
+
+      console.log(result.userData); // Log userData for debugging
+
+
       const userDetails = {
         email: result.userData.email,
         firstName: result.userData.firstName,

@@ -33,8 +33,11 @@ public class OrderService {
         order.setOrderNumber(UUID.randomUUID().toString());
         orderRepository.save(order);
 
-        OrderPlacedEvent orderPlacedEvent = new OrderPlacedEvent(order.getOrderNumber(),
-                orderRequestDto.getUserDetails().getEmail());
+        OrderPlacedEvent orderPlacedEvent = new OrderPlacedEvent();
+        orderPlacedEvent.setOrderNumber(order.getOrderNumber());
+        orderPlacedEvent.setEmail(orderRequestDto.getUserDetails().getEmail());
+
+
 
         log.info("Start- Sending OrderPlacedEvent {} to Kafka Topic", orderPlacedEvent);
         kafkaTemplate.send("order-placed", orderPlacedEvent);
